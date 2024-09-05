@@ -1,0 +1,116 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form label {
+    display: block;
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form input[type="text"],
+.form input[type="password"],
+.form input[type="date"],
+.form input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form input[type="text"]:focus,
+.form input[type="password"]:focus,
+.form input[type="date"]:focus,
+.form input[type="number"]:focus {
+    border-color: #0066cc;
+    outline: none;
+}
+
+.btn, .btn-logout {
+    background-color: #0066cc;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-logout {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.btn:hover, .btn-logout:hover {
+    background-color: #004999;
+}
+
+.leave-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.leave-list li {
+    background-color: #e9ecef;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+
+.leave-item {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+.status {
+    font-weight: bold;
+}
+
+.status.pending {
+    color: #f0ad4e;
+}
+
+.status.approved {
+    color: #5cb85c;
+}
+
+.status.rejected {
+    color: #d9534f;
+}

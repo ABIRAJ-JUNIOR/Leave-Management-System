@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="flex-container">
+            <h1>Employee Management</h1>
+            <!-- Add Employee Button -->
+            <button id="createEmployeeBtn">Add Employee</button>
+        </div>
+        <!-- Search Input -->
+        <input type="text" id="searchInput" placeholder="Search by NIC, First Name, Last
+Name..." style="margin-top: 10px;">
+        <!-- Employee Table -->
+        <table id="employeeTable">
+            <thead>
+                <tr>
+                    <th>EMP ID</th>
+                    <th>NIC</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Date of Birth</th>
+                    <th>Date of Joining</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="employeeTableBody"></tbody>
+        </table>
+        <br>
+        <!-- Toast Notification -->
+        <div id="toast"></div>
+        <!-- Employee Modal -->
+        <div id="employeeModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modalTitle">Add Employee</h2>
+                <form id="employeeForm">
+                    <input type="hidden" id="empId" name="empId">
+                    <div>
+                        <label for="nic">NIC Number:</label>
+                        <input type="text" id="nic" name="nic" required>
+                    </div>
+                    <div>
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div>
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                    <div>
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    <div>
+                        <label for="doj">Date of Joining:</label>
+                        <input type="date" id="doj" name="doj" required>
+                    </div>
+                    <button type="submit" id="saveButton">Save</button>
+                </form>
+            </div>
+        </div>
+        <!-- Credentials Modal -->
+        <div id="credentialsModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Edit Credentials</h2>
+                <form id="credentialsForm">
+                    <input type="hidden" id="credentialsEmpId" name="empId">
+                    <div>
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" disabled required>
+                    </div>
+                    <div>
+                        <label for="password">Password:</label>
+                        <input type="text" id="password" name="password" required>
+                    </div>
+                    <div>
+                        <label for="userrole">Role:</label>
+                        <select id="userrole" name="userrole">
+                            <option value="Employee">Employee</option>
+                            <option value="Manager">Manager</option>
+                            <option value="Admin">Admin</option>
+                            <option value="Director">Director</option>
+                        </select>
+                    </div>
+                    <button type="submit">Save Credentials</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

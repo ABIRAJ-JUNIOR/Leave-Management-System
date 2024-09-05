@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Management</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2 id="welcomeMessage"></h2>
+            <button id="logoutButton" class="btn-logout">Logout</button>
+        </div>
+        <h2>Manage Leave Requests</h2>
+
+        <label for="statusFilter">Filter by Status:</label>
+        <select id="statusFilter">
+            <option value="all">All</option>
+            <option value="pending">Pending</option>
+            <option value="approved">Approved</option>
+            <option value="rejected">Rejected</option>
+        </select>
+
+        <ul id="leaveRequests" class="leave-list"></ul>
+    </div>
+
+    <!-- Modal for Rejecting Leave -->
+    <div id="rejectModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Reject Leave Request</h3>
+            <form id="rejectForm">
+                <label for="rejectionReason">Reason for Rejection:</label>
+                <textarea id="rejectionReason" name="rejectionReason" required></textarea><br><br>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="managerLeaveManagement.js"></script>
+</body>
+
+</html>
