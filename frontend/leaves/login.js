@@ -5,7 +5,6 @@ document.getElementById('loginForm').addEventListener('submit', async function (
     const password = document.getElementById('password').value;
 
     try {
-        // Fetch user data with embedded employee data
 
         // http://localhost:3000/users?_embed=employee&username=EMP_L6Zae&password=pwd123
 
